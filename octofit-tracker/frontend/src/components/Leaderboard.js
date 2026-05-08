@@ -72,7 +72,7 @@ function Leaderboard() {
                         <td className="text-center">{getRankBadge(index + 1)}</td>
                         <td className="fw-semibold">{entry.user}</td>
                         <td>
-                          <span className="badge bg-success fs-6">{entry.score}</span>
+                          <span className="badge bg-success fs-6">{entry.points}</span>
                         </td>
                       </tr>
                     ))

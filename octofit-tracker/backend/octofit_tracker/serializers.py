@@ -17,6 +17,7 @@ class TeamSerializer(serializers.ModelSerializer):
 
 class ActivitySerializer(serializers.ModelSerializer):
     id = serializers.CharField(read_only=True)
+    user = serializers.SlugRelatedField(slug_field='name', read_only=True)
 
     class Meta:
         model = Activity
@@ -31,6 +32,7 @@ class WorkoutSerializer(serializers.ModelSerializer):
 
 class LeaderboardSerializer(serializers.ModelSerializer):
     id = serializers.CharField(read_only=True)
+    user = serializers.SlugRelatedField(slug_field='name', read_only=True)
 
     class Meta:
         model = Leaderboard
