@@ -1,7 +1,9 @@
 from django.db import models
+from djongo import models as djongo_models
 
 # User model
 class User(models.Model):
+    id = djongo_models.ObjectIdField(primary_key=True, editable=False, db_column='_id')
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     team = models.CharField(max_length=50)
@@ -10,6 +12,7 @@ class User(models.Model):
 
 # Team model
 class Team(models.Model):
+    id = djongo_models.ObjectIdField(primary_key=True, editable=False, db_column='_id')
     name = models.CharField(max_length=50, unique=True)
     description = models.TextField(blank=True)
     def __str__(self):
@@ -17,6 +20,7 @@ class Team(models.Model):
 
 # Activity model
 class Activity(models.Model):
+    id = djongo_models.ObjectIdField(primary_key=True, editable=False, db_column='_id')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     type = models.CharField(max_length=50)
     duration = models.IntegerField()  # in minutes
@@ -26,6 +30,7 @@ class Activity(models.Model):
 
 # Workout model
 class Workout(models.Model):
+    id = djongo_models.ObjectIdField(primary_key=True, editable=False, db_column='_id')
     name = models.CharField(max_length=100)
     description = models.TextField()
     difficulty = models.CharField(max_length=20)
@@ -34,6 +39,7 @@ class Workout(models.Model):
 
 # Leaderboard model
 class Leaderboard(models.Model):
+    id = djongo_models.ObjectIdField(primary_key=True, editable=False, db_column='_id')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     points = models.IntegerField(default=0)
     def __str__(self):
