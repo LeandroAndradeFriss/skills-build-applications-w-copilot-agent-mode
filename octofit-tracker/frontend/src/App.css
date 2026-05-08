@@ -1,0 +1,88 @@
+/* OctoFit Tracker — Custom styles complementing Bootstrap */
+
+body {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+
+/* Page layout */
+.page-content {
+  flex: 1;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-radius: 0.625rem 0.625rem 0 0 !important;
+  padding: 0.85rem 1.25rem;
+}
+
+/* Tables */
+.table th {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Rank badges for leaderboard */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.rank-1 {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.rank-2 {
+  background-color: #c0c0c0;
+  color: #000;
+}
+
+.rank-3 {
+  background-color: #cd7f32;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #adb5bd;
+  padding: 1rem 0;
+}
